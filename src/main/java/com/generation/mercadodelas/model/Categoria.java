@@ -16,7 +16,7 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-    @NotBlank(message = "O atributo títuçp é Obrigatório!")
+    @NotBlank(message = "O atributo título é Obrigatório!")
     @Size(max = 255, message = "O atributo tipo deve conter no máximo 255 caracteres")
 	private String tipo;
 	
