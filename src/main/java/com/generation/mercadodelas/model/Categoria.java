@@ -18,11 +18,11 @@ public class Categoria {
 	
     @NotBlank(message = "O atributo títuçp é Obrigatório!")
     @Size(max = 255, message = "O atributo tipo deve conter no máximo 255 caracteres")
-	private String tipo_categoria;
+	private String tipo;
 	
     @NotBlank(message = "O atributo Descrição é Obrigatório!")
     @Size(min = 10, max = 255, message = "O atributo Descrição deve conter no mínimo 10 e no máximo 255 caracteres")
-    private String descricao_categoria;
+    private String descricao;
 
 	public Long getId() {
 		return id;
@@ -32,20 +32,20 @@ public class Categoria {
 		this.id = id;
 	}
 
-	public String getTipo_categoria() {
-		return tipo_categoria;
+	public String getTipo() {
+		return tipo;
 	}
 
-	public void setTipo_categoria(String tipo_categoria) {
-		this.tipo_categoria = tipo_categoria;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
-	public String getDescricao_categoria() {
-		return descricao_categoria;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setDescricao_categoria(String descricao_categoria) {
-		this.descricao_categoria = descricao_categoria;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 }
