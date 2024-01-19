@@ -1,9 +1,12 @@
 package com.generation.mercadodelas.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -33,6 +36,14 @@ public class Produto {
 	@NotBlank(message = "O atributo foto é obrigatório!")
 	@Size(max = 5000, message = "O link da foto não deve conter mais do que 5000 caracteres!")
 	private String foto;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Categoria categoria;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Usuario usuario;
 
 	public Long getId() {
 		return id;
@@ -80,6 +91,22 @@ public class Produto {
 
 	public void setFoto(String foto) {
 		this.foto = foto;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	} 
 	
 	
