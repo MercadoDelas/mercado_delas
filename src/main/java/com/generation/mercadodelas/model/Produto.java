@@ -30,7 +30,7 @@ public class Produto {
 	@NotNull(message = "O atributo preço é obrigatório!")
 	private double preco;
 	
-	@NotBlank(message = "O atributo quantidade é obrigatório!")
+	@NotNull(message = "O atributo quantidade é obrigatório!")
 	private int quantidade;
 	
 	@NotBlank(message = "O atributo foto é obrigatório!")
