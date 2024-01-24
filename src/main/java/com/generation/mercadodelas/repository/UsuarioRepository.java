@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.generation.mercadodelas.model.Usuario;
 
 @Repository
-public interface UsuarioRepositoy extends JpaRepository<Usuario, Long> {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-		public Optional<Usuario> findByUsuario(String usuario); ///teste
+		public Optional<Usuario> findByUsuario(String usuario); 
 }
